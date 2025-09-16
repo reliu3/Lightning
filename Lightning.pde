@@ -8,12 +8,21 @@ void setup()
   size(300,300);
   strokeWeight(5);
   background(10,24,77,13.3);
+  noStroke();
 }
 void draw()
 {
   noStroke();
+  //background
   fill(10,24,77,33);
   rect(0,0,300,300);
+  
+  //umbrlla
+  fill(232,178,178);
+  arc(150,200,100,100,radians(180),radians(360));
+  
+  
+  //lightining bolt
   stroke((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
   while(endX<=height) {
     endY = startY + (int)(Math.random()*10);
