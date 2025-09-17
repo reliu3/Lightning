@@ -7,20 +7,16 @@ void setup()
 {
   size(300,300);
   strokeWeight(5);
-  background(10,24,77,13.3);
+  background(23,23,23);
+  frameRate(30);
   noStroke();
 }
 void draw()
 {
   noStroke();
   //background
-  fill(10,24,77,33);
+  fill(23,23,23,70);
   rect(0,0,300,300);
-  
-  //umbrlla
-  fill(232,178,178);
-  arc(150,200,100,100,radians(180),radians(360));
-  
   
   //lightining bolt
   stroke((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
@@ -31,7 +27,43 @@ void draw()
     startY = endY;
     startX = endX;
   }
+  
+ 
+ noStroke();
+ //rain
+ fill(160,160,160);
+ int i = 0;
+ while(i<25) {
+   ellipse((int)(Math.random()*width), (int)(Math.random()*height), 3,5);
+   i++;
+ }
+ 
+ 
+ //person body
+ fill(216,216,214);
+ ellipse(130,241,25,45);
+ 
+ //person head
+ fill(255,255,255);
+ ellipse(130,207,25,25);
+ 
+ 
+ //umbrlla
+ fill(93,93,92);
+ arc(150,200,100,100,radians(180),radians(360));
+ fill(62,62,62);
+ rect(147,200, 6,50);
+ 
+ //person arm
+ fill(255,255,255);
+ ellipse(150,230,10,10);
+
+ //ground
+ fill(20,20,20);
+ rect(0,255,width,height-255);
 }
+
+
 void mousePressed()
 {
   startY = 0;
@@ -39,3 +71,7 @@ void mousePressed()
   startX = 150;
   endX = 150;
 }
+
+//void mouseClicked() {
+//  System.out.println(mouseX +" "+ mouseY);
+//}
