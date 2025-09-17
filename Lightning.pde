@@ -34,7 +34,7 @@ void draw()
  fill(160,160,160);
  int i = 0;
  while(i<25) {
-   ellipse((int)(Math.random()*width), (int)(Math.random()*height), 3,7);
+   ellipse((int)(Math.random()*width), (int)(Math.random()*height), 2,10);
    i++;
  }
  
